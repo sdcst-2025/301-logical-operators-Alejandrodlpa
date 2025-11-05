@@ -30,3 +30,19 @@ Enter an integer=>4
 Enter an integer=>2
 2,4,5 do not form a Pythagorean triple
 """
+import math 
+x=int(input("An integer "))
+y=int(input("Another integer "))
+z=int(input("One Last inegert "))
+high=max(x,y,z)
+low=min(x,y,z)
+if (x==low and y==high) or (y==low and x==high):
+    mid=z
+if (y==low and z==high) or (z==low and y==high):
+    mid=x
+if (z==low and x==high) or (x==low and z==high):
+    mid=y
+if ((low**2)+(mid**2))**(1/2)==high:
+    print(f"{x},{y},{z} form a Pythagorean triple")
+else:
+    print(f"{x},{y},{z} do not form a Pythagorean triple")
