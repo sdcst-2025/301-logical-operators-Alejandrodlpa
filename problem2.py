@@ -26,3 +26,16 @@ Enter a number: 4
 Enter another number: 25
 4 is not a factor of 25
 """
+import math 
+x=float(input("An integer "))
+y=float(input("Another integer "))
+if x>y:
+    low=y
+    high=x
+else:
+    low=x
+    high=y
+if high%low==0:
+    print(f"{low} is a factor of {high}")
+else:
+     print(f"{low} is not a factor of {high}")
